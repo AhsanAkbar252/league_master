@@ -1,0 +1,75 @@
+<div class="page-heading">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 offset-md-1">
+        <h1 class="page-heading__title">All <span class="highlight">Games</span></h1>
+        <ol class="page-heading__breadcrumb breadcrumb">
+          <li class="breadcrumb-item"><a href="<%= root_path %>">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page" >All Games</a></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="site-content">
+  <div class="container">    
+    <div class="card card--has-table">
+      <div class="card__header">
+        <h4>Game Details</h4>
+        <%= link_to 'New game', new_game_path, class:"btn btn-xs btn-default btn-outline" %>
+      </div>
+      <div class="card__content">
+        <div class="table-responsive">
+          <table class="table table-hover team-schedule team-schedule--full">
+            <thead>
+              <tr>
+                <th class="team-schedule__date">State</th>
+                <th class="team-schedule__status">Date</th>
+                <th class="team-schedule__status">Venue</th>
+                <th class="team-schedule__status">Home Team</th>
+                <th class="team-schedule__time">Away Team</th>
+                <th class="team-schedule__time"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @games.each do |game| %>
+                <tr>
+                  <td class="team-schedule__status"><%= game.state %></td>
+                  <td class="team-schedule__time"><%= game.date %></td>
+                  <td class="team-schedule__time"><%= game.venue.address %></td>
+                  <td class="team-schedule__time"><%= game.home_team.name %></td>
+                  <td class="team-schedule__time"><%= game.away_team.name %></td>
+                  <td class="team-schedule__tickets">
+                    <%= link_to 'Details', game_path(game), class:"btn btn-xs btn-default btn-outline btn-block ",  style:"width:100%;" %>
+                  </td>
+                  <td class="team-schedule__tickets">
+                    <%= link_to 'Edit', edit_game_path(game), class:"btn btn-xs btn-default btn-outline btn-block ",  style:"width:100%;" %>
+                  </td>
+                  <td class="team-schedule__tickets">
+                    <%= link_to 'Delete', game, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-xs btn-default btn-outline btn-block ",  style:"width:100%;" %>
+                  </td>
+                </tr>
+                <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <!-- Schedule & Tickets / End -->
+
+    <!-- Team Pagination -->
+    <nav class="team-pagination" aria-label="Team navigation">
+      <ul class="pagination pagination--condensed pagination--lg justify-content-center">
+        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><span class="page-link">...</span></li>
+        <li class="page-item"><a class="page-link" href="#">16</a></li>
+      </ul>
+    </nav>
+    <!-- Team Pagination / End -->
+
+  </div>
+</div>
+

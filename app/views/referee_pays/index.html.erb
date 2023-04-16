@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Referee Pays</h1>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Amount</th>
+      <th>Position</th>
+      <th>Level</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @referee_pays.each do |referee_pay| %>
+      <tr>
+        <td><%= referee_pay.amount %></td>
+        <td><%= referee_pay.referee_position.name %></td>
+        <td><%= referee_pay.referee_level.name %></td>
+        <td><%= link_to 'Show', referee_pay %></td>
+        <td><%= link_to 'Edit', edit_referee_pay_path(referee_pay) %></td>
+        <td><%= link_to 'Destroy', referee_pay, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Referee Pay', new_referee_pay_path %>

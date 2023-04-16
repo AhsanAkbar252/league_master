@@ -1,0 +1,65 @@
+<div class="page-heading">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 offset-md-1">
+        <h1 class="page-heading__title">All <span class="highlight">Referee Levels</span></h1>
+        <ol class="page-heading__breadcrumb breadcrumb">
+          <li class="breadcrumb-item"><a href="<%= root_path %>">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page" >All Referee Levels</a></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="site-content">
+  <div class="container">    
+    <div class="card card--has-table">
+      <div class="card__header">
+        <h4>Referee Level Details</h4>
+        <%= link_to 'New Referee Level', new_referee_level_path, class:"btn btn-xs btn-default btn-outline" %>
+      </div>
+      <div class="card__content">
+        <div class="table-responsive">
+          <table class="table table-hover team-schedule team-schedule--full">
+            <thead>
+              <tr>
+                <th class="team-schedule__date">Name</th>
+                <th class="team-schedule__time"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @referee_levels.each do |referee_level| %>
+                <tr>
+                  <td class="team-schedule__status"><%= referee_level.name %></td>
+                  <td class="team-schedule__tickets">
+                    <%= link_to 'Edit', edit_referee_level_path(referee_level), class:"btn btn-xs btn-default btn-outline btn-block ",  style:"width:100%;" %>
+                  </td>
+                  <td class="team-schedule__tickets">
+                    <%= link_to 'Delete', referee_level, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-xs btn-default btn-outline btn-block ",  style:"width:100%;" %>
+                  </td>
+                </tr>
+                <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <!-- Schedule & Tickets / End -->
+
+    <!-- Team Pagination -->
+    <nav class="team-pagination" aria-label="Team navigation">
+      <ul class="pagination pagination--condensed pagination--lg justify-content-center">
+        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><span class="page-link">...</span></li>
+        <li class="page-item"><a class="page-link" href="#">16</a></li>
+      </ul>
+    </nav>
+    <!-- Team Pagination / End -->
+
+  </div>
+</div>
+
+

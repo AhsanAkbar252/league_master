@@ -1,0 +1,82 @@
+<!-- Page Heading
+================================================== -->
+<div class="page-heading">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 offset-md-1">
+        <h1 class="page-heading__title">Division <span class="highlight">Stats</span></h1>
+        <ol class="page-heading__breadcrumb breadcrumb">
+          <li class="breadcrumb-item"><a href="_soccer_index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="_soccer_team-overview.html">Divisions</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Stats</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Page Heading / End -->
+
+<div class="site-content">
+  <div class="container">
+
+    <!-- Team Standings -->
+    <div class="card card--has-table">
+      <div class="card__header">
+        <h4><%= @division.name %></h4>
+      </div>
+      <div class="card__content">
+        <div class="table-responsive">
+          <table class="table table-hover table-standings table-standings--full table-standings--full-soccer">
+            <thead>
+              <tr>
+                <%# <th class="team-standings__pos">Pos</th> %>
+                <th class="team-standings__team">Teams</th>
+                <th class="team-standings__played">Played</th>
+                <th class="team-standings__win">Won</th>
+                <th class="team-standings__lose">Lost</th>
+                <th class="team-standings__drawn">Drawn</th>
+                <th class="team-standings__goals-for">Goals For</th>
+                <th class="team-standings__goals-against">Goals Against</th>
+                <%# <th class="team-standings__goals-diff">Goals Diff</th>
+                <th class="team-standings__total-points">Total Points</th>
+                <th class="team-standings__points-diff">Points Diff</th> %>
+              </tr>
+            </thead>
+            <tbody>
+              <% @division_teams.each do |division_team| %>
+                <% game_stats = games_stats(division_team)%>
+                <tr>
+                  <%# <td class="team-standings__pos">01</td> %>
+                  <td class="team-standings__team">
+                    <div class="team-meta">
+                      <figure class="team-meta__logo">
+                        <% if division_team.photo.attached? %>
+                          <img src="<%= url_for(division_team.photo) %>">
+                        <% end %>
+                      </figure>
+                      <div class="team-meta__info">
+                        <h6 class="team-meta__name"><%= division_team.name %></h6>
+                        <%# <span class="team-meta__place">Bebop Institute</span> %>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="team-standings__played"><%= games_played(division_team).count %></td>
+                  <td class="team-standings__win"><%= game_stats[:wins] %></td>
+                  <td class="team-standings__lose"><%= game_stats[:losses]  %></td>
+                  <td class="team-standings__drawn"><%= game_stats[:ties] %></td>
+                  <td class="team-standings__goals-for"><%= goals_scored_for(division_team) %></td>
+                  <td class="team-standings__goals-against"><%= goals_scored_against(division_team) %></td>
+                  <%# <td class="team-standings__goals-diff"></td> %>
+                  <%# <td class="team-standings__total-points">118</td>
+                  <td class="team-standings__points-diff">+ 15</td> %>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <!-- Team Standings / End -->
+
+  </div>
+</div>

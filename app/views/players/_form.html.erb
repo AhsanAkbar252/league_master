@@ -1,0 +1,83 @@
+
+  <!-- Content
+  ================================================== -->
+  <div class="site-content">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-lg-12">
+
+          <!-- Personal Information -->
+          <div class="card card--lg">
+            <div class="card__header">
+              <h4>player Information</h4>
+            </div>
+            <div class="card__content">
+              <%= form_with model: @player, class: "df-personal-info" do |form| %>
+                <div class="row">
+                <% if player.errors.any? %>
+                  <div id="error_explanation">
+                    <h2><%= pluralize(player.errors.count, "error") %> prohibited this player from being saved:</h2>
+
+                    <ul>
+                      <% player.errors.each do |error| %>
+                        <li><%= error.full_message %></li>
+                      <% end %>
+                    </ul>
+                  </div>
+                <% end %>
+                
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <%= form.label :first_name %>
+                      <%= form.text_field :first_name, class: "form-control", placeholder: "Enter first name" %>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <%= form.label :last_name %>
+                      <%= form.text_field :last_name, class: "form-control", placeholder: "Enter last name" %>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <%= form.label :email %>
+                      <%= form.text_field :email, class: "form-control", placeholder: "Enter Email" %>
+                    </div>
+                  </div>
+        
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <%= form.label :phone %>
+                      <%= form.text_field :phone, class: "form-control", placeholder: "Enter Email" %>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-group form-group--upload">
+                      <div class="form-group__avatar">
+                        <%# <img src="../assets/images/samples/avatar-empty.png" alt=""> %>
+                        <div class="form-group__label">
+                          <%= form.label :photo %></br>
+                          <%= form.file_field :photo, class: "btn btn-default btn-xs btn-file" %>
+                          <%# <span>Minimum size 60x60px</span> %>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group--submit">
+                  <button type="submit" class="btn btn-default btn-lg btn-block" style="width: 100%;">Save Changes</button>
+                </div>
+
+              <% end %>
+            </div>
+          </div>
+          <!-- Personal Information / End -->
+        </div>
+      </div>
+    </div>
+  </div>

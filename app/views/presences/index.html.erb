@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Presences</h1>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>State</th>
+      <th>Player</th>
+      <th>Game</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @presences.each do |presence| %>
+      <tr>
+        <td><%= presence.state %></td>
+        <td><%= presence.player.first_name %></td>
+        <td><%= presence.game_id %></td>
+        <td><%= link_to 'Show', presence %></td>
+        <td><%= link_to 'Edit', edit_presence_path(presence) %></td>
+        <td><%= link_to 'Destroy', presence, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Presence', new_presence_path %>

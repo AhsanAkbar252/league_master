@@ -1,0 +1,828 @@
+<!-- Page Heading
+================================================== -->
+<div class="page-heading">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 offset-md-1">
+        <h1 class="page-heading__title">Game <span class="highlight">Dashboard</span></h1>
+        <ol class="page-heading__breadcrumb breadcrumb">
+          <li class="breadcrumb-item"><a href="<%= root_path %>">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page" >Game Dashboard</a></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Page Heading / End -->
+
+
+
+<div class="site-content">
+  <div class="container">
+
+    <!-- Timeline -->
+    <%# <div class="card">
+      <div class="card__header">
+        <h4>Game Timeline</h4>
+      </div>
+      <div class="card__content card__content--pattern-dotted">
+
+        <div class="game-timeline-wrapper pt-4 pb-4">
+          <div class="game-timeline game-timeline--adaptive">
+
+            <div class="game-timeline__event">
+              <div class="game-timeline__team-1">
+                <div class="game-timeline__team-shirt">
+                  <i class="icon-svg icon-shirt"></i>
+                </div>
+              </div>
+              <div class="game-timeline__time">0’</div>
+              <div class="game-timeline__team-2">
+                <div class="game-timeline__team-shirt">
+                  <i class="icon-svg icon-shirt-alt"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="game-timeline__event game-timeline__event--22">
+              <div class="game-timeline__team-1">
+                <div class="game-timeline__event-info">
+                  <div class="game-timeline__event-name">F. Stevens</div>
+                  <div class="game-timeline__event-desc">Alchemists 1-0</div>
+                </div>
+                <i class="icon-svg icon-soccer-ball"></i>
+              </div>
+              <div class="game-timeline__time">22’</div>
+            </div>
+
+            <div class="game-timeline__event game-timeline__event--36">
+              <div class="game-timeline__time">36’</div>
+              <div class="game-timeline__team-2">
+                <i class="icon-svg icon-yellow-card"></i>
+                <div class="game-timeline__event-info">
+                  <div class="game-timeline__event-name">J. Griffin</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="game-timeline__event game-timeline__event--ht">
+              <div class="game-timeline__time">HT</div>
+              <div class="game-timeline__team-2">
+                <i class="icon-svg icon-substitution"></i>
+                <div class="game-timeline__event-info">
+                  <div class="game-timeline__event-name">R. Valentine</div>
+                  <div class="game-timeline__event-name">M. Jackson</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="game-timeline__event game-timeline__event--59">
+              <div class="game-timeline__team-1">
+                <div class="game-timeline__event-info">
+                  <div class="game-timeline__event-name">B.Kingster</div>
+                </div>
+                <i class="icon-svg icon-red-card"></i>
+              </div>
+              <div class="game-timeline__time">59’</div>
+            </div>
+
+            <div class="game-timeline__event game-timeline__event--68">
+              <div class="game-timeline__team-1">
+                <div class="game-timeline__event-info">
+                  <div class="game-timeline__event-name">C. Grass (P)</div>
+                  <div class="game-timeline__event-desc">Alchemists 2-0</div>
+                </div>
+                <i class="icon-svg icon-soccer-ball-penalty"></i>
+              </div>
+              <div class="game-timeline__time">68’</div>
+            </div>
+
+            <div class="game-timeline__event game-timeline__event--84">
+              <div class="game-timeline__time">84’</div>
+              <div class="game-timeline__team-2">
+                <i class="icon-svg icon-yellow-card"></i>
+                <div class="game-timeline__event-info">
+                  <div class="game-timeline__event-name">W. Christison</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="game-timeline__event game-timeline__event--ft">
+              <div class="game-timeline__time">FT</div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div> %>
+    <!-- Timeline / End -->
+
+
+    <div class="row">
+      <!-- Content -->
+      <div class="content col-lg-12">
+
+        <!-- Video Highlights -->
+        <%# <div class="card card--no-paddings">
+          <header class="card__header">
+            <h4>Video Highlights</h4>
+          </header>
+          <div class="card__content">
+            <div class="alc-embeded-player alc-embeded-player--bg-color-dark " data-id="XE0fU9PCrWE" data-controls="false" data-provider="youtube" data-thumbnail="assets/images/soccer/samples/_soccer_post-img1-xlg.jpg" data-easy-embed>
+              <div class="alc-embeded-player__overlay">
+                <div class="alc-embeded-player__inner">
+                  <h3 class="alc-embeded-player__title">Check The Alchemists in action in this exclusive clip from last night</h3>
+                  <time datetime="2017-08-28" class="alc-embeded-player__date">January 27th, 2020</time>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> %>
+        <!-- Video Highlights / End -->
+
+        <!-- Game Scoreboard -->
+        <%# <div class="card">
+          <header class="card__header alc-teams-legend">
+            <h4 class="alc-teams-legend__title">Match Statistics</h4>
+            <div class="alc-teams-legend__info">
+              <!-- Teams -->
+              <div class="alc-teams-legend__teams">
+        
+                <!-- Team #0 -->
+                <div class="alc-teams-legend__team">
+                  <span class="alc-teams-legend__team-color alc-teams-legend__team-color--color-primary"></span>
+                  <img src="assets/images/soccer/logos/alchemists_s_shield.png" class="alc-teams-legend__team-logo" alt="The Alchemists">
+                </div>
+                <!-- Team #0 / End -->
+                <!-- Team #1 -->
+                <div class="alc-teams-legend__team">
+                  <span class="alc-teams-legend__team-color alc-teams-legend__team-color--color-4"></span>
+                  <img src="assets/images/samples/logos/lucky_clovers_shield.png" class="alc-teams-legend__team-logo" alt="Lucky Clovers">
+                </div>
+                <!-- Team #1 / End -->
+        
+              </div>
+              <!-- Teams / End -->
+        
+              <a href="_soccer_event-team-stats.html" class="btn btn-default btn-outline btn-xs">Full Team Stats</a>
+            </div>
+          </header>
+          <div class="card__content">
+        
+            <!-- Game Result -->
+            <div class="game-result">
+              <section class="game-result__section">
+                <div class="game-result__content mb-0">
+                  <div class="game-result__stats">
+                    <div class="row">
+                      <div class="col-12 col-md-6 order-md-2">
+                        <div class="game-result__table-stats game-result__table-stats--soccer">
+                          <table class="table table-wrap-bordered table-thead-color">
+                            <thead>
+                              <tr>
+                                <th colspan="3">Main Statistics</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>25(14)</td>
+                                <td>Shots (on goal)</td>
+                                <td>16(6)</td>
+                              </tr>
+                              <tr>
+                                <td>9</td>
+                                <td>Corner Kicks</td>
+                                <td>11</td>
+                              </tr>
+                              <tr>
+                                <td>8</td>
+                                <td>Saves</td>
+                                <td>5</td>
+                              </tr>
+                              <tr>
+                                <td>0</td>
+                                <td>Yellow Cards</td>
+                                <td>2</td>
+                              </tr>
+                              <tr>
+                                <td>1</td>
+                                <td>Red Cards</td>
+                                <td>0</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <div class="col-6 col-md-3 order-md-1 game-result__stats-team-1">
+        
+                        <div class="row">
+                          <div class="col-6">
+                            <div class="circular circular--size-70">
+                              <div class="circular__bar" data-percent="84.5">
+                                <span class="circular__percents">84.5<small>%</small></span>
+                              </div>
+                              <span class="circular__label">Shot Accuracy</span>
+                            </div>
+                          </div>
+                          <div class="col-6">
+                            <div class="circular circular--size-70">
+                              <div class="circular__bar" data-percent="62.3">
+                                <span class="circular__percents">62.3<small>%</small></span>
+                              </div>
+                              <span class="circular__label">Pass Accuracy</span>
+                            </div>
+                          </div>
+                        </div>
+        
+                        <div class="spacer"></div>
+        
+                        <!-- Progress: Sho -->
+                        <div class="progress-stats">
+                          <div class="progress__label">Sho</div>
+                          <div class="progress">
+                            <div class="progress__bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%; "></div>
+                          </div>
+                          <div class="progress__number">25</div>
+                        </div>
+                        <!-- Progress: Sho / End -->
+                        <!-- Progress: Fou -->
+                        <div class="progress-stats">
+                          <div class="progress__label">Fou</div>
+                          <div class="progress">
+                            <div class="progress__bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%; "></div>
+                          </div>
+                          <div class="progress__number">12</div>
+                        </div>
+                        <!-- Progress: Fou / End -->
+                        <!-- Progress: OFF -->
+                        <div class="progress-stats">
+                          <div class="progress__label">OFF</div>
+                          <div class="progress">
+                            <div class="progress__bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%; "></div>
+                          </div>
+                          <div class="progress__number">10</div>
+                        </div>
+                        <!-- Progress: OFF / End -->
+        
+                      </div>
+                      <div class="col-6 col-md-3 order-md-3 game-result__stats-team-2">
+        
+                        <div class="row">
+                          <div class="col-6">
+                            <div class="circular circular--size-70">
+                              <div class="circular__bar" data-percent="84.5" data-bar-color="#9fe900">
+                                <span class="circular__percents">84.5<small>%</small></span>
+                              </div>
+                              <span class="circular__label">Shot Accuracy</span>
+                            </div>
+                          </div>
+                          <div class="col-6">
+                            <div class="circular circular--size-70">
+                              <div class="circular__bar" data-percent="62.3" data-bar-color="#9fe900">
+                                <span class="circular__percents">62.3<small>%</small></span>
+                              </div>
+                              <span class="circular__label">Pass Accuracy</span>
+                            </div>
+                          </div>
+                        </div>
+        
+                        <div class="spacer"></div>
+        
+                        <!-- Progress: Sho -->
+                        <div class="progress-stats">
+                          <div class="progress__label">Sho</div>
+                          <div class="progress">
+                            <div class="progress__bar progress__bar--success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div>
+                          </div>
+                          <div class="progress__number">20</div>
+                        </div>
+                        <!-- Progress: Sho / End -->
+                        <!-- Progress: Fou -->
+                        <div class="progress-stats">
+                          <div class="progress__label">Fou</div>
+                          <div class="progress">
+                            <div class="progress__bar progress__bar--success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+                          </div>
+                          <div class="progress__number">14</div>
+                        </div>
+                        <!-- Progress: Fou / End -->
+                        <!-- Progress: OFF -->
+                        <div class="progress-stats">
+                          <div class="progress__label">OFF</div>
+                          <div class="progress">
+                            <div class="progress__bar progress__bar--success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;"></div>
+                          </div>
+                          <div class="progress__number">12</div>
+                        </div>
+                        <!-- Progress: OFF / End -->
+        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+        
+              <!-- Ball Possession -->
+              <section class="game-result__section">
+                <header class="game-result__subheader card__subheader">
+                  <h5 class="game-result__subtitle">Ball Possession</h5>
+                </header>
+                <div class="game-result__content">
+        
+                  <div class="spacer-sm"></div>
+        
+                  <!-- Progress: Ball Possession -->
+                  <div class="progress-double-wrapper">
+                    <div class="progress-inner-holder">
+                      <div class="progress__digit progress__digit--left progress__digit--highlight">62%</div>
+                      <div class="progress__double">
+                        <div class="progress progress--lg">
+                          <div class="progress__bar" role="progressbar" aria-valuenow="62" aria-valuemin="0" aria-valuemax="100" style="width: 62%;"></div>
+                        </div>
+                        <div class="progress progress--lg">
+                          <div class="progress__bar progress__bar--success" role="progressbar" aria-valuenow="38" aria-valuemin="0" aria-valuemax="100" style="width: 38%;"></div>
+                        </div>
+                      </div>
+                      <div class="progress__digit progress__digit--right progress__digit--highlight">38%</div>
+                    </div>
+                  </div>
+                  <!-- Progress: Ball Possession / End -->
+        
+                </div>
+              </section>
+              <!-- Ball Possession / End -->
+        
+        
+            </div>
+            <!-- Game Result / End -->
+        
+          </div>
+        </div> %>
+        <!-- Game Scoreboard / End -->
+
+        <div class="row">
+          <div class="col-md-6">
+            <!-- Widget: Lineup Table -->
+            <aside class="widget card card--has-table widget--sidebar widget-lineup-table">
+              <div class="widget__title card__header">
+                <h4>Game Referees</h4>
+              </div>
+              <div class="widget__content card__content">
+            
+                <!-- Lineup Table -->
+                <div class="table-responsive">
+                  <table class="table lineup-table">
+                    <thead>
+                      <tr>
+                        <%# <th class="lineup__pos">POS</th> %>
+                        <th class="lineup__num">Referee</th>
+                        <th class="lineup__name">Position</th>
+                        <th class="lineup__num"></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+            
+                      <% @referee_sets.each do |referee_set| %>
+                        <tr>
+                          <td class="lineup__num"><%= referee_set.referee.first_name %></td>
+                          <%# <td class="lineup__pos">GK</td> %>
+                          <td class="lineup__name"><%= referee_set.referee_position.name %></td>
+                          <td class="lineup__name"></td>
+                        </tr>
+                      <% end %>
+            
+                    </tbody>
+                  </table>
+                </div>
+                <!-- Lineup Table / End -->
+              </div>
+            </aside>
+            <!-- Widget: Lineup Table / End -->
+          </div>
+          <div class="col-md-6">
+            <div class="card card--lg">
+                <div class="card__header">
+                <h4>New Referee</h4>
+                </div>
+                <div class="card__content">
+                  <%= form_with model: @referee_set, class: "df-personal-info" do |form| %>
+                      <div class="row">
+                      <% if @referee_set.errors.any? %>
+                          <div id="error_explanation">
+                          <h2><%= pluralize(@referee_set.errors.count, "error") %> prohibited this goal from being saved:</h2>
+
+                          <ul>
+                              <% referee_set.errors.each do |error| %>
+                              <li><%= error.full_message %></li>
+                              <% end %>
+                          </ul>
+                          </div>
+                      <% end %>
+                      <div class="col-md-6">
+                          <div class="form-group">
+                          <%= form.label :referee_id %>
+                          <%= form.select(:referee_id, Referee.all.pluck(:first_name, :id), {include_blank: "Referee"}, { :class => 'form-control' }) %>
+                          </div>
+                      </div>
+
+                      <div class="col-md-6">
+                          <div class="form-group">
+                          <%= form.label :referee_position_id %>
+                          <%= form.select(:referee_position_id, RefereePosition.all.pluck(:name, :id), {include_blank: "Position"}, { :class => 'form-control' }) %>
+                          </div>
+                      </div>
+
+                      <div class="col-md-6">
+                          <div class="form-group">
+                              <%= form.hidden_field :game_id, value: @game.id, class: "form-control", placeholder: "Time" %>
+                          </div>
+                      </div>
+
+                      </div>
+
+                      <div class="form-group--submit">
+                      <button type="submit" class="btn btn-default btn-lg btn-block" style="width: 100%;">Save Changes</button>
+                      </div>
+
+                  <% end %>
+                </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <!-- Widget: Lineup Table -->
+            <aside class="widget card card--has-table widget--sidebar widget-lineup-table">
+              <div class="widget__title card__header">
+                <h4>Goals</h4>
+              </div>
+              <div class="widget__content card__content">
+            
+                <!-- Lineup Table -->
+                <div class="table-responsive">
+                  <table class="table lineup-table">
+                    <thead>
+                      <tr>
+                        <%# <th class="lineup__pos">POS</th> %>
+                        <th class="lineup__num">Time</th>
+                        <th class="lineup__name">Player Name</th>
+                        <th class="lineup__num"></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+            
+                      <% @goals.each do |goal| %>
+                        <tr>
+                          <td class="lineup__num"><%= goal.time %></td>
+                          <%# <td class="lineup__pos">GK</td> %>
+                          <td class="lineup__name"><%= goal.player.first_name %> <%= goal.player.last_name %></td>
+                          <td class="lineup__name"></td>
+                        </tr>
+                      <% end %>
+            
+                    </tbody>
+                  </table>
+                </div>
+                <!-- Lineup Table / End -->
+              </div>
+            </aside>
+            <!-- Widget: Lineup Table / End -->
+                <div class="card card--lg">
+                    <div class="card__header">
+                    <h4>New Goal</h4>
+                    </div>
+                    <div class="card__content">
+                    <%= form_with model: @goal, class: "df-personal-info" do |form| %>
+                        <div class="row">
+                        <% if @goal.errors.any? %>
+                            <div id="error_explanation">
+                            <h2><%= pluralize(@goal.errors.count, "error") %> prohibited this goal from being saved:</h2>
+
+                            <ul>
+                                <% goal.errors.each do |error| %>
+                                <li><%= error.full_message %></li>
+                                <% end %>
+                            </ul>
+                            </div>
+                        <% end %>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                            <%= form.label :time %>
+                            <%= form.text_field :time, class: "form-control", placeholder: "Time" %>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                            <%= form.label :player_id %>
+                            <%= form.select(:player_id, Player.all.pluck(:first_name, :id), {include_blank: "Team"}, { :class => 'form-control' }) %>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <%= form.hidden_field :game_id, value: @game.id, class: "form-control", placeholder: "Time" %>
+                            </div>
+                        </div>
+
+                        </div>
+
+                        <div class="form-group--submit">
+                        <button type="submit" class="btn btn-default btn-lg btn-block" style="width: 100%;">Save Changes</button>
+                        </div>
+
+                    <% end %>
+                    </div>
+                </div>
+          </div>
+          <div class="col-md-4">
+            <!-- Widget: Lineup Table -->
+            <aside class="widget card card--has-table widget--sidebar widget-lineup-table">
+              <div class="widget__title card__header">
+                <h4>Yellow Cards</h4>
+              </div>
+              <div class="widget__content card__content">
+            
+                <!-- Lineup Table -->
+                <div class="table-responsive">
+                  <table class="table lineup-table">
+                    <thead>
+                      <tr>
+                        <%# <th class="lineup__pos">POS</th> %>
+                        <th class="lineup__num">Time</th>
+                        <th class="lineup__name">Player Name</th>
+                        <th class="lineup__num"></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+            
+                      <% @yellow_cards.each do |yellow_card| %>
+                        <tr>
+                          <td class="lineup__num"><%= yellow_card.time %></td>
+                          <%# <td class="lineup__pos">GK</td> %>
+                          <td class="lineup__name"><%= yellow_card.player.first_name %> <%= yellow_card.player.last_name %></td>
+                          <td class="lineup__name"></td>
+                        </tr>
+                      <% end %>
+            
+                    </tbody>
+                  </table>
+                </div>
+                <!-- Lineup Table / End -->
+              </div>
+            </aside>
+            <!-- Widget: Lineup Table / End -->
+                <div class="card card--lg">
+                    <div class="card__header">
+                    <h4>New Yellow Card</h4>
+                    </div>
+                    <div class="card__content">
+                    <%= form_with model: @yellow_card, class: "df-personal-info" do |form| %>
+                        <div class="row">
+                        <% if @yellow_card.errors.any? %>
+                            <div id="error_explanation">
+                            <h2><%= pluralize(@yellow_card.errors.count, "error") %> prohibited this Yellow Card from being saved:</h2>
+
+                            <ul>
+                                <% @yellow_card.errors.each do |error| %>
+                                <li><%= error.full_message %></li>
+                                <% end %>
+                            </ul>
+                            </div>
+                        <% end %>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                            <%= form.label :time %>
+                            <%= form.text_field :time, class: "form-control", placeholder: "Time" %>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                            <%= form.label :player_id %>
+                            <%= form.select(:player_id, Player.all.pluck(:first_name, :id), {include_blank: "Team"}, { :class => 'form-control' }) %>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <%= form.hidden_field :game_id, value: @game.id, class: "form-control", placeholder: "Time" %>
+                            </div>
+                        </div>
+
+                        </div>
+
+                        <div class="form-group--submit">
+                        <button type="submit" class="btn btn-default btn-lg btn-block" style="width: 100%;">Save Changes</button>
+                        </div>
+
+                    <% end %>
+                    </div>
+                </div>
+          </div>
+
+          <div class="col-md-4">
+            <!-- Widget: Lineup Table -->
+            <aside class="widget card card--has-table widget--sidebar widget-lineup-table">
+              <div class="widget__title card__header">
+                <h4>Red Cards</h4>
+              </div>
+              <div class="widget__content card__content">
+            
+                <!-- Lineup Table -->
+                <div class="table-responsive">
+                  <table class="table lineup-table">
+                    <thead>
+                      <tr>
+                        <%# <th class="lineup__pos">POS</th> %>
+                        <th class="lineup__num">Time</th>
+                        <th class="lineup__name">Player Name</th>
+                        <th class="lineup__num"></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+            
+                      <% @red_cards.each do |red_card| %>
+                        <tr>
+                          <td class="lineup__num"><%= red_card.time %></td>
+                          <%# <td class="lineup__pos">GK</td> %>
+                          <td class="lineup__name"><%= red_card.player.first_name %> <%= red_card.player.last_name %></td>
+                          <td class="lineup__name"></td>
+                        </tr>
+                      <% end %>
+            
+                    </tbody>
+                  </table>
+                </div>
+                <!-- Lineup Table / End -->
+              </div>
+            </aside>
+            <!-- Widget: Lineup Table / End -->
+                <div class="card card--lg">
+                    <div class="card__header">
+                    <h4>New Red Card</h4>
+                    </div>
+                    <div class="card__content">
+                    <%= form_with model: @red_card, class: "df-personal-info" do |form| %>
+                        <div class="row">
+                        <% if @red_card.errors.any? %>
+                            <div id="error_explanation">
+                            <h2><%= pluralize(@red_card.errors.count, "error") %> prohibited this Red Card from being saved:</h2>
+
+                            <ul>
+                                <% @red_card.errors.each do |error| %>
+                                <li><%= error.full_message %></li>
+                                <% end %>
+                            </ul>
+                            </div>
+                        <% end %>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                            <%= form.label :time %>
+                            <%= form.text_field :time, class: "form-control", placeholder: "Time" %>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                            <%= form.label :player_id %>
+                            <%= form.select(:player_id, Player.all.pluck(:first_name, :id), {include_blank: "Team"}, { :class => 'form-control' }) %>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <%= form.hidden_field :game_id, value: @game.id, class: "form-control", placeholder: "Time" %>
+                            </div>
+                        </div>
+
+                        </div>
+
+                        <div class="form-group--submit">
+                        <button type="submit" class="btn btn-default btn-lg btn-block" style="width: 100%;">Save Changes</button>
+                        </div>
+
+                    <% end %>
+                    </div>
+                </div>
+          </div>
+          
+        </div>
+
+        <!-- Post Comments -->
+        <%# <div class="post-comments card card--lg">
+          <header class="post-commments__header card__header">
+            <h4>Comments (18)</h4>
+          </header>
+          <div class="post-comments__content card__content">
+        
+            <ul class="comments">
+              <li class="comments__item">
+                <div class="comments__inner">
+                  <header class="comment__header">
+                    <div class="comment__author">
+                      <figure class="comment__author-avatar">
+                        <img src="assets/images/samples/avatar-9.jpg" alt="">
+                      </figure>
+                      <div class="comment__author-info">
+                        <h5 class="comment__author-name">Jake Casspon</h5>
+                        <time class="comment__post-date" datetime="2016-08-23">2 hours ago</time>
+                      </div>
+                    </div>
+                    <div class="comment__reply">
+                      <a href="#" class="comment__reply-link btn btn-link btn-xs">Reply</a>
+                    </div>
+                  </header>
+                  <div class="comment__body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore etolor dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+                  </div>
+                </div>
+              </li>
+              <li class="comments__item">
+                <div class="comments__inner">
+                  <header class="comment__header">
+                    <div class="comment__author">
+                      <figure class="comment__author-avatar">
+                        <img src="assets/images/samples/avatar-10.jpg" alt="">
+                      </figure>
+                      <div class="comment__author-info">
+                        <h5 class="comment__author-name">Jennifer Stevens</h5>
+                        <time class="comment__post-date" datetime="2016-08-23">5 hours ago</time>
+                      </div>
+                    </div>
+                    <div class="comment__reply">
+                      <a href="#" class="comment__reply-link btn btn-link btn-xs">Reply</a>
+                    </div>
+                  </header>
+                  <div class="comment__body">
+                    Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.
+                  </div>
+                </div>
+                <ul class="comments--children">
+                  <li class="comments__item">
+                    <div class="comments__inner">
+                      <header class="comment__header">
+                        <div class="comment__author">
+                          <figure class="comment__author-avatar">
+                            <img src="assets/images/samples/avatar-7.jpg" alt="">
+                          </figure>
+                          <div class="comment__author-info">
+                            <h5 class="comment__author-name">The Speedtester</h5>
+                            <time class="comment__post-date" datetime="2016-08-23">3 hours ago</time>
+                          </div>
+                        </div>
+                        <div class="comment__reply">
+                          <a href="#" class="comment__reply-link btn btn-link btn-xs">Reply</a>
+                        </div>
+                      </header>
+                      <div class="comment__body">
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="comments__item">
+                <div class="comments__inner">
+                  <header class="comment__header">
+                    <div class="comment__author">
+                      <figure class="comment__author-avatar">
+                        <img src="assets/images/samples/avatar-11.jpg" alt="">
+                      </figure>
+                      <div class="comment__author-info">
+                        <h5 class="comment__author-name">Marina Universe</h5>
+                        <time class="comment__post-date" datetime="2016-08-23">5 hours ago</time>
+                      </div>
+                    </div>
+                    <div class="comment__reply">
+                      <a href="#" class="comment__reply-link btn btn-link btn-xs">Reply</a>
+                    </div>
+                  </header>
+                  <div class="comment__body">
+                    Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.
+                  </div>
+                </div>
+              </li>
+            </ul>
+        
+            <!-- Comments Pagination -->
+            <nav aria-label="Comments Pavigation" class="post__comments-pagination" aria-label="Comments navigation">
+              <ul class="pagination justify-content-center">
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><span class="page-link">...</span></li>
+                <li class="page-item"><a class="page-link" href="#">16</a></li>
+              </ul>
+            </nav>
+            <!-- Comments Pagination / End -->
+        
+          </div>
+        </div> %>
+        <!-- Post Comments / End -->
+
+      </div>
+      <!-- Content / End -->
+    </div>
+
+  </div>
+</div>

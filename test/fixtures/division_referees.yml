@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  referee_level: one
+  division: one
+  referee: one
+
+two:
+  referee_level: two
+  division: two
+  referee: two

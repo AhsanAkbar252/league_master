@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @referee_pay.amount %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @referee_pay.referee_position_id %>
+</p>
+
+<p>
+  <strong>Level:</strong>
+  <%= @referee_pay.referee_level_id %>
+</p>
+
+<%= link_to 'Edit', edit_referee_pay_path(@referee_pay) %> |
+<%= link_to 'Back', referee_pays_path %>

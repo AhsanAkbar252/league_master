@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @referee.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @referee.last_name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @referee.email %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @referee.phone %>
+</p>
+
+<%= link_to 'Edit', edit_referee_path(@referee) %> |
+<%= link_to 'Back', referees_path %>

@@ -1,0 +1,32 @@
+<%= form_with(model: red_card) do |form| %>
+  <% if red_card.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(red_card.errors.count, "error") %> prohibited this red_card from being saved:</h2>
+
+      <ul>
+        <% red_card.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :time %>
+    <%= form.number_field :time %>
+  </div>
+
+  <div class="field">
+    <%= form.label :player_id %>
+    <%= form.text_field :player_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :game_id %>
+    <%= form.text_field :game_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

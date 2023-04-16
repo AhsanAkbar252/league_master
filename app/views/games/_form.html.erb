@@ -1,0 +1,79 @@
+  <!-- Content
+  ================================================== -->
+  <div class="site-content">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-lg-12">
+
+          <!-- Personal Information -->
+          <div class="card card--lg">
+            <div class="card__header">
+              <h4>Game Information</h4>
+            </div>
+            <div class="card__content">
+              <%= form_with model: @game, class: "df-personal-info" do |form| %>
+                <div class="row">
+                 <div class="col-md-12">
+                    <% if game.errors.any? %>
+                      <div id="error_explanation">
+                        <h2><%= pluralize(game.errors.count, "error") %> prohibited this game from being saved:</h2>
+
+                        <ul>
+                          <% game.errors.each do |error| %>
+                            <li><%= error.full_message %></li>
+                          <% end %>
+                        </ul>
+                      </div>
+                    <% end %>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <%= form.label :state %>
+                      <%= form.select(:state, ["Started", "Cancelled", "Postponed", "Played"], {include_blank: "Select State"}, { :class => 'form-control' }) %>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <%= form.label :venue_id %>
+                      <%= form.select(:venue_id, Venue.all.pluck(:address, :id), {include_blank: "Select Venue"}, { :class => 'form-control' }) %>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <%= form.label :home_team_id %>
+                      <%= form.select(:home_team_id, Team.all.pluck(:name, :id), {include_blank: "Select Home Team"}, { :class => 'form-control' }) %>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <%= form.label :away_team_id %>
+                      <%= form.select(:away_team_id, Team.all.pluck(:name, :id), {include_blank: "Select Away Team"}, { :class => 'form-control' }) %>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <%= form.label :date %></br>
+                      <%= form.date_select :date, class: "form-control", placeholder: "Select Date" %>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group--submit">
+                  <button type="submit" class="btn btn-default btn-lg btn-block" style="width: 100%;">Save Changes</button>
+                </div>
+
+              <% end %>
+            </div>
+          </div>
+          <!-- Personal Information / End -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Content / End -->
